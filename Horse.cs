@@ -24,7 +24,7 @@ public class Horse : Animal
             Hungry = true; 
         } 
     }
-    //An additional method for 
+    //An additional method for horses
     public void RaceDay()
     {
         if (RaceHorse)

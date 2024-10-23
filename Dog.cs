@@ -3,7 +3,6 @@ namespace Labb2_Arv;
 
 public class Dog : Animal
 {
-    //Add an additional property for dogs. 
     public bool Active { get; set; }
 
     //A constructor where initial values for new instanses of the dog-klass are set. 
