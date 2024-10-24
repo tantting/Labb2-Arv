@@ -7,13 +7,14 @@ public class Rotweiler : Dog
 
     public Rotweiler()
     {
-        Name = "Rottis";
         Age = 6;
         EnergyLevel = 8;
         Hungry = false;
         Sleepy = false;
         Active = true;
-        Temper = "calm"; 
+        Temper = "calm";
+        Domesticated = true;
+        NumberOfArmsAndLegs = 4; 
     }
 
     public override void MakeSound()

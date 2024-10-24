@@ -1,14 +1,13 @@
 //Jenny-Ann Hayward, SUT24
 namespace Labb2_Arv;
 
-public class Dog : Animal
+public class Dog : Mammal
 {
     public bool Active { get; set; }
 
     //A constructor where initial values for new instanses of the dog-klass are set. 
     public Dog()
     {
-        Name = "Fido";
         Age = 8;
         EnergyLevel = 10;
         Hungry = false;
@@ -18,7 +17,7 @@ public class Dog : Animal
     //an additonal method for dogs  
     public void Track()
     {
-        Console.WriteLine($"Vad ska {Name} spåra upp?");
+        Console.WriteLine($"Vad ska jag spåra upp åt dig?");
         string answer = Console.ReadLine();
         Console.WriteLine($"Hittat! {answer} låg under soffan! ");
     }

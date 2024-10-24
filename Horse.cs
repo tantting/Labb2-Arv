@@ -1,17 +1,18 @@
 namespace Labb2_Arv;
 
-public class Horse : Animal
+public class Horse : Mammal
 {
     public bool RaceHorse { get; set; }
 
     public Horse()
     {
-        Name = "Blacky";
         Age = 5;
         EnergyLevel = 6;
         Hungry = false;
         Sleepy = false;
         RaceHorse = true;
+        Domesticated = true;
+        NumberOfArmsAndLegs = 4; 
     }
 
     //An override method for Crazyrun, where there's a difference between animals at which energy-level they are hungry.
