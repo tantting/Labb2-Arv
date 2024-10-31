@@ -3,16 +3,23 @@ namespace Labb2_Arv;
 
 public class Dog : Mammal
 {
-    public bool Active { get; set; }
-
-    //A constructor where initial values for new instanses of the dog-klass are set. 
+    public bool Active { get; set; } = true;
+    //An empty constructor and one for setting other values for all properties
     public Dog()
     {
-        Age = 8;
-        EnergyLevel = 10;
-        Hungry = false;
-        Sleepy = false;
-        Active = true; 
+        Domesticated = true;
+    }
+
+    public Dog(int age, int energyLevel, bool hungry, bool sleepy, int numberOfArmsAndLegs, bool domesticated, 
+        bool active, bool enjoysWater)
+    {
+        Age = age;
+        EnergyLevel = energyLevel;
+        Hungry = hungry;
+        Sleepy = sleepy;
+        NumberOfArmsAndLegs = numberOfArmsAndLegs;
+        Domesticated = domesticated; 
+        Active = active;
     }
     //an additonal method for dogs  
     public void Track()
@@ -24,7 +31,7 @@ public class Dog : Mammal
     //An override method for Crazyrun, where there's a difference between animals at which energy-level they are hungry. 
     public override void CrazyRun()
     {
-            Console.WriteLine("I have so much energy - must doooo aaaa Craaaazy Ruuuun!!!");
+            Console.WriteLine("I have so much energy - must doooo aaaa Craaaazy Ruuuun! Weeeeiiiiiiii!!");
             EnergyLevel -= 3;
             if (EnergyLevel < 5)   
             {

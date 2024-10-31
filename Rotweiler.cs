@@ -3,18 +3,22 @@ namespace Labb2_Arv;
 
 public class Rotweiler : Dog
 {
-    public string Temper { get; set; }
-
-    public Rotweiler()
+    public string Temper { get; set; } = "calm";
+    public Rotweiler() : base()
     {
-        Age = 6;
-        EnergyLevel = 8;
-        Hungry = false;
-        Sleepy = false;
-        Active = true;
-        Temper = "calm";
-        Domesticated = true;
-        NumberOfArmsAndLegs = 4; 
+    }
+
+    public Rotweiler(int age, int energyLevel, bool hungry, bool sleepy, int numberOfArmsAndLegs, bool domesticated, 
+        bool active, string temper)
+    {
+        Age = age;
+        EnergyLevel = energyLevel;
+        Hungry = hungry;
+        Sleepy = sleepy;
+        NumberOfArmsAndLegs = numberOfArmsAndLegs;
+        Domesticated = domesticated; 
+        Active = active;
+        Temper = temper;
     }
 
     public override void MakeSound()

@@ -4,17 +4,24 @@ namespace Labb2_Arv;
 
 public class Rabbit : Mammal
 {
-    public bool Fertil { get; set; }
+    public bool Fertil { get; set; } = true; 
 
     public Rabbit()
     {
-        Age = 1;
-        EnergyLevel = 7;
         Hungry = true;
-        Sleepy = false;
-        Fertil = true;
-        Domesticated = true;
-        NumberOfArmsAndLegs = 4; 
+        Domesticated = true; 
+    }
+
+    public Rabbit(int age, int energyLevel, bool hungry, bool sleepy, int numberOfArmsAndLegs, bool domesticated, 
+        bool fertil)
+    {
+        Age = age;
+        EnergyLevel = energyLevel;
+        Hungry = hungry;
+        Sleepy = sleepy;
+        NumberOfArmsAndLegs = numberOfArmsAndLegs;
+        Domesticated = domesticated; 
+        Fertil = fertil; 
     }
     /// <summary>
     /// The rabbit has found a hole in the fence and escapes. 
@@ -29,7 +36,7 @@ public class Rabbit : Mammal
     /// </summary>
     public override void CrazyRun()
     {
-        Console.WriteLine("Oh yeah, how liberating it is to do a crazy run");
+        Console.WriteLine("I have so much energy - must doooo aaaa Craaaazy Ruuuun! Weeeeiiiiiiii!!");
         EnergyLevel -= 3;
         if (EnergyLevel < 8)   //The rabbits are hungry already at 7 and below. 
         {

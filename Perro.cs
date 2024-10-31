@@ -6,20 +6,23 @@ namespace Labb2_Arv;
 
 public class Perro : Dog
 {
-    //Perro de agua Espanol (Spanish water dog) have tradionally been active in water (their fur etc are well adapted 
-    //for it, but not all individuals like water or swimming. 
-    public bool EnjoysWater { get; set; }
+    public bool EnjoysWater { get; set; } = true; 
 
-    public Perro()
+    public Perro() : base()
     {
-        Age = 13;
-        EnergyLevel = 7;
-        Hungry = false;
-        Sleepy = false;
-        Active = true;
-        EnjoysWater = true;
-        NumberOfArmsAndLegs = 4;
-        Domesticated = true; 
+    }
+
+    public Perro(int age, int energyLevel, bool hungry, bool sleepy, int numberOfArmsAndLegs, bool domesticated, 
+        bool active, bool enjoysWater)
+    {
+        Age = age;
+        EnergyLevel = energyLevel;
+        Hungry = hungry;
+        Sleepy = sleepy;
+        NumberOfArmsAndLegs = numberOfArmsAndLegs;
+        Domesticated = domesticated; 
+        Active = active;
+        EnjoysWater = enjoysWater;
     }
     /// <summary>
     /// A method where the perro encounters water. 

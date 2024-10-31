@@ -6,19 +6,25 @@ public class Horse : Mammal
 
     public Horse()
     {
-        Age = 5;
-        EnergyLevel = 6;
-        Hungry = false;
-        Sleepy = false;
-        RaceHorse = true;
-        Domesticated = true;
-        NumberOfArmsAndLegs = 4; 
+        Domesticated = true; 
+    }
+
+    public Horse(int age, int energyLevel, bool hungry, bool sleepy, int numberOfArmsAndLegs, bool domesticated, 
+        bool raceHorse)
+    {
+        Age = age;
+        EnergyLevel = energyLevel;
+        Hungry = hungry;
+        Sleepy = sleepy;
+        NumberOfArmsAndLegs = numberOfArmsAndLegs;
+        Domesticated = domesticated; 
+        RaceHorse = raceHorse; 
     }
 
     //An override method for Crazyrun, where there's a difference between animals at which energy-level they are hungry.
     public override void CrazyRun()
     {
-        Console.WriteLine("Oh yeah, how liberating it is to do a crazy run");
+        Console.WriteLine("I have so much energy - must doooo aaaa Craaaazy Ruuuun! Weeeeiiiiiiii!!");
         EnergyLevel -= 3;
         if (EnergyLevel < 4) 
         {
